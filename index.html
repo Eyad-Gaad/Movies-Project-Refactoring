@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies App</title>
+    <!-- icons -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@300;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,300;1,500;1,700&family=Tajawal:wght@200;300;400;500;800;900&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <!-- stylesheet link -->
+    <link rel="stylesheet" href="./css/output.css" />
+    <script src="./js/main.js" type="module"></script>
+  </head>
+  <body class="bg-black">
+    <!--Navbar  -->
+    <nav id="navbar" class="z-50 fixed top-0 start-0 end-0 py-5 duration-[0.3s]">
+      <div class="container flex flex-col justify-between gap-y-6 md:flex-row md:items-center">
+        <div class="flex justify-between text-lg font-bold">
+          <a id="movies-logo" href="#home" class="flex items-center gap-x-2 text-xl text-white"><i class="fa-solid fa-film text-2xl text-common-color"></i> Movies </a>
+         <div class="block md:hidden"><i id="bars-btn" class="cursor-pointer text-2xl fa-solid fa-bars text-white"></i></div>
+        </div>
+      <!-- menu -->
+        <ul id="nav-menu" class="w-full self-center hidden flex-col justify-evenly gap-y-4 text-center md:w-[60%] md:flex md:flex-row text-common-color">
+          <li><a href="#home" class="nav-anchor active-nav-anchor">Home</a></li>
+          <li><a href="#movies" class="nav-anchor">Movies</a></li>
+          <li><a href="#coming soon" class="nav-anchor">Coming Soon</a></li>
+          <li><a href="#newsletter" class="nav-anchor">Newsletter</a></li>
+        </ul>
+        <a id="sign-in-btn" href="#" class="hidden main-btn md:block">Sign In</a>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+
+    <!-- Home -->
+    <header id="home" style="background-image: url(./img/home3.jpg);" class="h-screen flex items-center bg-cover bg-center">
+      <div class="container mt-20 flex flex-col gap-y-3">
+          <span class="font-semibold">MARVEL UNIVERSE</span>
+          <h2 class="text-5xl leading-12 font-bold sm:text-6xl sm:leading-16 md:text-7xl md:leading-22 text-white">Spider-Man <br> Far From Home</h2>
+          <a href="#" class="main-btn w-35">Book Now</a>
+      </div>
+    </header>
+    <!-- Home -->
+
+
+    <!-- Movies -->
+    <section id="movies" class="container py-16 text-white">
+      <div class="container">
+        <h2 class="text-xl font-semibold">OPENING THIS WEEK</h2>
+        <div class="head-line"></div>
+        <div id="this-week-container" class="movies-container">
+          <!-- Generating DOM Element Using JS File. -->
+        </div>
+      </div>
+    </section>
+    <!-- Movies -->
+
+
+    <!-- Coming Soon -->
+    <section id="coming soon" class="container py-16 text-white">
+      <div class="container">
+        <h2 class="text-xl font-semibold">COMING SOON</h2>
+        <div class="head-line"></div>
+        <div id="coming-soon-container" class="movies-container">
+          <!-- Generating DOM Element Using JS File. -->
+        </div>
+      </div>
+    </section>
+    <!-- Coming Soon -->
+
+
+    
+    <!-- Newsletter -->
+    <section id="newsletter" class="py-16">
+      <div class="flex flex-col items-center gap-y-7">
+        <h2 class="text-center text-3xl font-semibold leading-13 text-white">
+          Subscribe To Get <br/>
+          Newsletter
+        </h2>
+        <form class="relative w-[90%] sm:w-md">
+          <input class="w-full px-3 py-4 rounded-lg outline-0 bg-white" type="email" placeholder="Enter Email..." />
+          <button type="submit" value="Subscribe" class="px-5 py-2 main-btn absolute end-2 translate-y-1.5">Subscribe</button>
+        </form>
+      </div>
+    </section>
+    <!-- Newsletter -->
+
+
+    <!-- footer & copyrights -->
+    <footer class="container sm:pt-13">
+      <div class="container pb-13 flex flex-col items-center gap-y-4 sm:flex-row sm:justify-between">
+        <a href="index.html" class="flex items-center gap-x-2 font-bold text-white">
+          <i class="fa-solid fa-film text-2xl text-common-color"></i> Movies
+        </a>
+        <ul class="flex gap-x-3">
+          <li class="footer-link"><a href="#"> <i class="fa-brands fa-facebook"></i></a></li>
+          <li class="footer-link"><a href="#"> <i class="fa-brands fa-instagram"></i></a></li>
+          <li class="footer-link"><a href="#"> <i class="fa-brands fa-twitter"></i></a></li>
+          <li class="footer-link"><a href="#"> <i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+      </div>
+      <p class="text-center text-lg text-white">© <span class="text-common-color">Web Masters</span> All Right Reserved.</p>
+    </footer>
+    <!-- footer & copyrights -->
+  </body>
+</html>

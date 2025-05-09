@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+@theme{
+    --color-common-color:rgb(255, 44, 31);
+    --color-hover-color:rgb(250, 18, 22);
+}
+@layer utilities{
+    .container{
+        width: 86%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* Custome TailwindCss Component */
+@layer components{
+    .nav-anchor{
+        @apply text-lg font-semibold relative after:absolute after:bottom-[-6px] after:start-0 after:w-0 after:h-1 after:rounded-xl after:duration-[0.5s] hover:after:w-full hover:after:bg-common-color
+    }
+    .active-nav-anchor{
+        @apply after:w-full after:bg-common-color
+    }
+    .main-btn{
+        @apply px-6 py-3 text-center text-lg font-semibold rounded-lg cursor-pointer border-none duration-[0.2s] text-white bg-common-color hover:bg-hover-color
+    }
+    .head-line{
+        @apply w-full mt-1 mb-10 h-[2px] bg-common-color
+    }
+    .movies-container{
+        @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-7
+    }
+    .footer-link{
+        @apply w-14 h-14 flex justify-center items-center border-5 rounded-full text-3xl cursor-pointer duration-[0.5s] border-gray-400 text-common-color bg-white hover:text-white hover:border-red-800 hover:bg-common-color
+    }
+}
